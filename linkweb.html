@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/linkplayer.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+			}
+			.conent{
+				width: 100%;
+				height: 100%;
+				background: url(img/back.png);
+			}
+			.mag{
+				margin-bottom: 20px;
+			}
+			.conent_tilt{
+				position: absolute;
+				right: 20%;
+				top: 30%;
+			}
+			.conent_top img{
+				width: 52px;
+				height: 52px;
+			}
+			.conent_name img{
+				width: 136px
+				height: 23px;
+			}
+			.conent_size{
+				font-size:16px;
+				font-family:PingFang SC;
+				font-weight:600;
+				color:rgba(11,13,16,1);
+			}
+			.conent_size1{
+				font-size:14px;
+				font-family:PingFang SC;
+				font-weight:400;
+				color:rgba(11,13,16,1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="conent">
+			<div class="conent_tilt">
+				<div class="mag conent_top">
+					<img src="img/linkwebyinyong.png" >
+				</div>
+				<div class="mag conent_name">
+					<img src="./img/Linkweb.png" >
+				</div>
+				<div class="mag conent_size">
+					版本号
+				</div>
+				<div class="mag conent_size1" id='size'>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		H5sPlayerCanvasGetLinkWebVersion(function(strVer){
+			var strs=strVer.split(" ");
+			
+			console.log(strVer,strs[0]); 
+			document.getElementById('size').innerHTML=strs[0];
+		}, 
+		function(){
+			console.log('Please install LinkWeb !'); 
+			document.getElementById('size').innerHTML='Please install LinkWeb !';
+		});
+	</script>
+</html>
