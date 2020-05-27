@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
 		<script src="js/linkplayer.js"></script>
 		<style>
 			*{
@@ -69,10 +70,10 @@
 	</body>
 	<script>
 		H5sPlayerCanvasGetLinkWebVersion(function(strVer){
-			var strs=strVer.split(" ");
+			// var strs=strVer.split(" ");
 			
-			console.log(strVer,strs[0]); 
-			document.getElementById('size').innerHTML=strs[0];
+			// console.log(strVer,strs[0]); 
+			document.getElementById('size').innerHTML=strVer;
 		}, 
 		function(){
 			console.log('Please install LinkWeb !'); 
